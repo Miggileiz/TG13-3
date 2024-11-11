@@ -13,12 +13,10 @@ public class StartMyThread {
 		
 		
 		//Thread starten
-		a.start(); //nicht nebenläufiger Aufruf -> falsch
+		a.start(); //nicht nebenläufiger Aufruf -> falsch (run)
 		x.start(); //nebenläufiger Aufruf -> richtig
 		c.start(); //nebenläufiger Aufruf -> richtig
 		
 		System.out.println("Main Thread zuende");
-
 	}
-
 }

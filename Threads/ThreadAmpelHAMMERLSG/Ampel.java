@@ -22,7 +22,7 @@ public class Ampel implements Runnable {
         thread = new Thread(this);
         wechsleZustandZu(ROT);
     }
-
+    
     // Getter und Setter
     public String getName() {
         return name;
@@ -88,9 +88,4 @@ public class Ampel implements Runnable {
     public String toString() {
         return name + ": "+farben[aktZustand];
     }// end run()
-
-   
-   
-
-
 }

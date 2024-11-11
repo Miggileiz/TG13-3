@@ -7,31 +7,24 @@ public class MeinThread implements Runnable{
 	Thread t;
 	
 	public MeinThread(String name, int wait) {
-		
 		this.name = name;
 		this.wait = wait;
-		t = new Thread(this);
-		
+		t = new Thread(this);	
 	}
 	
 	public void start() {
 		t.start();
 	}
 	
-	
 	@Override
 	public void run() {
-		for (int i = 0; i < 100; i++) {
-			
+		for (int i = 0; i < 100; i++) {	
 			System.out.println(name + ": " + i);
 			try {
 				Thread.sleep(wait);
 			} catch (InterruptedException e) {
 				e.printStackTrace();				
 				}
-		}
-		
+		}	
 	}
-	
-
 }

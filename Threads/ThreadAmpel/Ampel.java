@@ -6,27 +6,20 @@ public class Ampel implements Runnable {
 	private int aktZustand;
 	private int wait = 0;
 	
-	public Ampel(String name, int wait) {
-		
+	public Ampel(String name, int wait) {	
 		this.name= name;
 		this.aktZustand = ROT;
 		this.wait = wait;
 	}
-	
-	
 	public static final int ROT = 0;
 	public static final int ROTGELB = 1;
 	public static final int GELB = 2;
 	public static final int GRUEN = 3;
 	
-		
 	@Override
 	public void run() {
-		while(true) {
-			
-			
-			try {
-				
+		while(true) {	
+			try {			
 			switch(aktZustand) {
 			
 			case ROT:
@@ -36,19 +29,16 @@ public class Ampel implements Runnable {
 			
 			case ROTGELB:
 				aktZustand= GELB;
-
 			System.out.println(name + "ROTGELB");
 			break;
 
 			case GELB:
 				aktZustand= GRUEN;
-
 			System.out.println(name + "GELB");
 			break;
 			
 			case GRUEN:
 				aktZustand= ROT;
-
 			System.out.println(name + "GREUN");
 			break;
 			}
@@ -59,5 +49,4 @@ public class Ampel implements Runnable {
 			System.out.println(name +"wurde unterbrochen");				}
 		}
 	}
-	
 }
