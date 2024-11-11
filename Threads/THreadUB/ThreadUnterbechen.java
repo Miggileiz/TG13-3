@@ -15,19 +15,14 @@ public class ThreadUnterbechen {
         a1.start();
         a2.start();
 
-
         Scanner s =new Scanner(System.in);
 
         System.out.println("Zahl eingeben: ");
+
         if(s.nextInt()==1){
             a1.stop();
             a2.stop();
-
-
-
         }
-
-        
 }
 }
 
