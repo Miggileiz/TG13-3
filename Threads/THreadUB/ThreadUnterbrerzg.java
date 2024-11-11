@@ -1,7 +1,7 @@
 package THreadUB;
 
 public class ThreadUnterbrerzg implements Runnable{
-
+//test
     String name;
     int aktZustand;
     int wait;
@@ -26,8 +26,6 @@ public class ThreadUnterbrerzg implements Runnable{
     public void stop(){
         t.interrupt();
     }
-
-
 
     @Override
     public void run() {
