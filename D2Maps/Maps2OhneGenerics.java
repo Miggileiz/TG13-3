@@ -3,7 +3,7 @@ import java.util.*;
 class Maps2OhneGenerics {
 
     public static void main(String[] args) {
-        Map map = new HashMap();
+        HashMap map = new HashMap();
 
         // Adding elements to map
         map.put(1, "Amit");

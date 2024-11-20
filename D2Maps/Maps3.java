@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 class Maps3 {
     public static void main(String[] args) {
@@ -25,20 +27,30 @@ class Maps3 {
 
         // Elements can traverse in any order
        System.out.println("\n----- Parkplätze der Schueler ---------");
-       for (Map.Entry m : map.entrySet()) {
+       for (Map.Entry<Schueler, Parkplatz> m : map.entrySet()) {
             System.out.println(m.getKey() + " " + m.getValue());
         }
 
         //Schuelerliste
         System.out.println("\n----- Schuelerliste ---------");
+        Set<Schueler> sl = new HashSet(map.keySet());
+        for (Schueler schueler : sl) {
+            System.out.println(schueler);
+        }
+
+
         List<Schueler> schuelerliste = new ArrayList<>(map.keySet());
         for (Schueler schueler : schuelerliste) {
             System.out.println(schueler);
         }
 
-
         //Parkplatzliste
          System.out.println("\n----- Parkplatzliste ---------");
+        Set<Parkplatz> a = new HashSet<>(map.values()); 
+        for (Parkplatz parkplatz : a) {
+            System.out.println(parkplatz);
+        }
+
         List<Parkplatz> parkplatzliste = new ArrayList<>(map.values());
         for (Parkplatz parkplatz : parkplatzliste) {
             System.out.println(parkplatz);
