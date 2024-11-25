@@ -1,5 +1,7 @@
 import java.util.HashMap;
 
+import MapsLernen.Person;
+
 public class lernen{
 
     public static void main(String[] args) {

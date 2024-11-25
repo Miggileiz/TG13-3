@@ -28,17 +28,5 @@ public class Selber {
           keinDeutscherPass.remove("LingLing");
           System.out.println(keinDeutscherPass);
 
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
