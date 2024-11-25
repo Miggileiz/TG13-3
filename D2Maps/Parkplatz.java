@@ -28,7 +28,4 @@ class Parkplatz {
     public String toString() {
         return "Parkplatz [parkplatzNr=" + parkplatzNr + ", Hinweis=" + Hinweis + "]";
     }
-
-    
-
 }

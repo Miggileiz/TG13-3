@@ -23,6 +23,12 @@ public static void main(String[] args) {
     int setGroesse = mitarbeiterSet.size();
     System.out.println(setGroesse);
 
+    if (setGroesse > 3) {
+        System.out.println("Liste ist Grösser als 1");
+    } else{
+        System.out.println("Penis");
+    }
+
     if(mitarbeiterSet.contains("Bernd")){
         System.out.println("Ist Bernd Teil des Teams? " + mitarbeiterSet.contains("Bernd"));
     }
@@ -50,8 +56,8 @@ System.out.print("Die Schnittmenge beider Sets ist:");
 System.out.println(schnittmenge);
 
 
-Set<Integer> differenz = new HashSet<Integer>(zweitesSet);
-differenz.removeAll(erstesSet);
+Set<Integer> differenz = new HashSet<Integer>(erstesSet);
+differenz.removeAll(zweitesSet);
 System.out.print("Diese Elemente sind nicht im zweiten Set vorhanden:");
 System.out.println(differenz);
 for(Integer df : differenz)

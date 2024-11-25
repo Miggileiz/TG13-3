@@ -28,8 +28,14 @@ class Maps3 {
         // Elements can traverse in any order
        System.out.println("\n----- Parkplätze der Schueler ---------");
        for (Map.Entry m : map.entrySet()) {
-            System.out.println(m.getKey() + " " + m.getValue());
+            System.out.println("key: " + m.getKey() + " " +" value: "+ m.getValue());
         }
+
+
+        for (Schueler i : map.keySet()) {
+            System.out.println("key: " + i + " value: " + map.get(i));
+          }
+      
 
         //Schuelerliste
         System.out.println("\n----- Schuelerliste ---------");
@@ -61,6 +67,8 @@ class Maps3 {
         System.out.println("\n----- Parkplatz eines Schuelers ---------");
         Parkplatz p = map.get(s1);
         System.out.println("Der Schüler "+s1.getName()+" hat den Parkplatz "+p.getParkplatzNr());
+
+        
 
     }
 }

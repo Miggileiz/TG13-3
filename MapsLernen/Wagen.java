@@ -23,7 +23,7 @@ class Wagen {
 
     @Override
     public String toString() {
-       return "Wagen [name=" + marke + ", vorname=" + kilo + "]";
+       return "Wagen [marke=" + marke + ", Kilometerstand=" + kilo + "]";
     }
 
 }
