@@ -22,9 +22,9 @@ public class Linkedlist {
     String i2 = programmiersprachen.get(2);
     System.out.println(i2);
 
-
-
-    programmiersprachen.remove(String.valueOf("Java"));
+    programmiersprachen.remove("Java");
+    
+   programmiersprachen.remove(String.valueOf("Java"));
     System.out.println(programmiersprachen);
     //suche nach dem befehl, wie man ein wort als erstes hinzufügt und das letzt hinzufüggt und löscht
 

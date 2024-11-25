@@ -12,10 +12,10 @@ public class ArraySelber{
         array.add("Pedo");
         array.add("Ahmed");
 
-         System.out.println(array);
+        System.out.println(array);
 
-        for(String e: array);
-        System.out.println("Namen: " + array);
+        for(String test : array)
+        System.out.println(test);
 
         if (array.contains("Ahmed"))
         {
@@ -24,7 +24,7 @@ public class ArraySelber{
         }
 
         Collections.sort(array); //Sortiert Alphabetisch
-        array.remove("Noah");
+        array.remove("Pedo");
         System.out.println(array +" Attentat erfolgreich!!!");
     }
 

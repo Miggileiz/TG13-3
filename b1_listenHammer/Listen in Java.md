@@ -15,7 +15,7 @@ int[] lotto = new int[6];
 ...
 //Speichern von Werten in einem Array
 lotto[0]=5;
-lotto[1]=15;v
+lotto[1]=15;
 lotto[2]=25;
 lotto[3]=26;
 lotto[4]=30;

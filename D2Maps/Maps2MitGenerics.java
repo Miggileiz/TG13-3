@@ -10,7 +10,7 @@ public class Maps2MitGenerics {
         map.put(101, "Vijay");
         map.put(102, "Rahul");
 
-        //  
+ 
         for (Map.Entry m : map.entrySet()) {
             System.out.println(m.getKey() + " " + m.getValue());
         }

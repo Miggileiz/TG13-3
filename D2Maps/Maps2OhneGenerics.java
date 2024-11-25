@@ -2,6 +2,7 @@ import java.util.*;
 
 class Maps2OhneGenerics {
 
+
     public static void main(String[] args) {
         HashMap map = new HashMap();
 

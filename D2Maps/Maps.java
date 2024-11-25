@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Map;
 import java.util.TreeMap;
 
 class Maps {
@@ -6,7 +7,7 @@ class Maps {
   public static void main(String[] args) {
 
     // Create a HashMap object called people
-    HashMap<String, Integer> people = new HashMap<>();
+    Map<String, Integer> people = new TreeMap<>();
     //Bei treeMap wieder sortiert
 
     // Add keys and values (Name, Age) doppelter Value ghet, Name nicht
@@ -15,13 +16,16 @@ class Maps {
     people.put("Angie", 33);
 
     System.out.println(people);
-    
-
-
+  
+    for(Map.Entry m : people.entrySet()){
+          System.out.println(m);
+    }
     // in dem i sind alle
     for (String i : people.keySet()) {
       System.out.println("key: " + i + " value: " + people.get(i));
     }
   }
+
+  
 
 }

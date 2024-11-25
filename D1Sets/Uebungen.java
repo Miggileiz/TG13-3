@@ -10,16 +10,24 @@ public static void main(String[] args) {
     mitarbeiterSet.add("alex");
     mitarbeiterSet.add("Bernd");
     mitarbeiterSet.add("Arne");
+    mitarbeiterSet.add("Arne");
 
-    mitarbeiterSet.remove("alex");
+    for(String ms : mitarbeiterSet)
+        System.out.println(ms);
+
+
     System.out.println(mitarbeiterSet);
+
+    System.out.println(mitarbeiterSet.size());
 
     int setGroesse = mitarbeiterSet.size();
     System.out.println(setGroesse);
 
     if(mitarbeiterSet.contains("Bernd")){
-        System.out.println("Ist Bernd Teil des Teams? " + mitarbeiterSet.contains("Berns"));
+        System.out.println("Ist Bernd Teil des Teams? " + mitarbeiterSet.contains("Bernd"));
     }
+
+    System.out.println("Ist Bernd Teil des Teams? " + mitarbeiterSet.contains("Bernd"));
 
 
 Set<Integer> erstesSet = new HashSet<Integer>();
@@ -28,7 +36,7 @@ erstesSet.add(9);
 System.out.println(erstesSet);
 
 Set<Integer> zweitesSet = new HashSet<Integer>();
-zweitesSet.addAll(Arrays.asList(new Integer[] {1, 3, 4, 5, 6, 7, 5})); 
+zweitesSet.addAll(Arrays.asList(new Integer[] {1, 4, 3, 5, 6, 7, 5})); 
 System.out.println(zweitesSet);
 
 Set<Integer> union = new HashSet<>(erstesSet);
@@ -42,15 +50,11 @@ System.out.print("Die Schnittmenge beider Sets ist:");
 System.out.println(schnittmenge);
 
 
-Set<Integer> differenz = new HashSet<Integer>(erstesSet);
-differenz.removeAll(zweitesSet);
+Set<Integer> differenz = new HashSet<Integer>(zweitesSet);
+differenz.removeAll(erstesSet);
 System.out.print("Diese Elemente sind nicht im zweiten Set vorhanden:");
 System.out.println(differenz);
-
-
-
-
-
+for(Integer df : differenz)
+System.out.println(df);
 }
-
 }

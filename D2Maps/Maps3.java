@@ -15,33 +15,33 @@ class Maps3 {
         Schueler s2=new Schueler("Prol","Conrad");
         Schueler s3=new Schueler("Kuscher","Kevin");
 
-        Parkplatz p1 = new Parkplatz("a1");
-        Parkplatz p2 = new Parkplatz("a2");
-        Parkplatz p3 = new Parkplatz("a3");
+        Parkplatz p1 = new Parkplatz("a1", 2);
+        Parkplatz p2 = new Parkplatz("a2",3);
+        Parkplatz p3 = new Parkplatz("a3",4);
 
         //Map mit Schuelern und Parkplätzen
         Map<Schueler, Parkplatz> map = new HashMap<Schueler, Parkplatz>();
         map.put(s1,p2);
-        map.put(s2, p3);
-        map.put(s3, p1);
+        map.put(s2,p3);
+        map.put(s3,p1);
 
         // Elements can traverse in any order
        System.out.println("\n----- Parkplätze der Schueler ---------");
-       for (Map.Entry<Schueler, Parkplatz> m : map.entrySet()) {
+       for (Map.Entry m : map.entrySet()) {
             System.out.println(m.getKey() + " " + m.getValue());
         }
 
         //Schuelerliste
         System.out.println("\n----- Schuelerliste ---------");
-        Set<Schueler> sl = new HashSet(map.keySet());
+        Set<Schueler> sl = new HashSet<>(map.keySet());
         for (Schueler schueler : sl) {
             System.out.println(schueler);
         }
 
 
         List<Schueler> schuelerliste = new ArrayList<>(map.keySet());
-        for (Schueler schueler : schuelerliste) {
-            System.out.println(schueler);
+        for (Schueler ss : schuelerliste) {
+            System.out.println(ss);
         }
 
         //Parkplatzliste

@@ -26,7 +26,7 @@ class Schueler {
 
     @Override
     public String toString() {
-        return "Schueler [name=" + name + ", vorname=" + vorname + "]";
+       return "Schueler [name=" + name + ", vorname=" + vorname + "]";
     }
 
     

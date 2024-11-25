@@ -1,10 +1,11 @@
 class Parkplatz {
     
     String parkplatzNr;
-    String Hinweis;
+    int Hinweis;
     
-    public Parkplatz(String parkplatzNr) {
+    public Parkplatz(String parkplatzNr, int Hinweis) {
         this.parkplatzNr = parkplatzNr;
+        this.Hinweis = Hinweis;
     }
 
     public String getParkplatzNr() {
@@ -15,12 +16,12 @@ class Parkplatz {
         this.parkplatzNr = parkplatzNr;
     }
 
-    public String getHinweis() {
+    public int getHinweis() {
         return Hinweis;
     }
 
-    public void setHinweis(String hinweis) {
-        Hinweis = hinweis;
+    public void setHinweis(int hinweis) {
+        this.Hinweis = hinweis;
     }
 
     @Override

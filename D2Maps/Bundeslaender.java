@@ -22,8 +22,7 @@ public class Bundeslaender {
             System.out.println(m.getKey() + " = " + m.getValue());
         }
 
-
-
+        System.out.println("---------------------");
         //Keys Bundesländer
         List<String> laender =  new ArrayList<>(bund.keySet());
         for(String l : laender)
@@ -37,10 +36,6 @@ public class Bundeslaender {
         {
             System.out.println("Die Hauptstädete lauten: " + h);
         }
-
-        String hsBW = bund.get("Stuttgart");
-        System.out.println(hsBW);
-
         String blST = bund.get("Baden-Württemberg");
         System.out.println(blST);
 

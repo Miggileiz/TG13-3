@@ -21,6 +21,7 @@ public class ArrayListBsp{
         Integer i1 = messwerte.get(2);
         System.out.println(i1);
         
+      
         messwerte.remove(Integer.valueOf(3));
         System.out.println(messwerte);
         
