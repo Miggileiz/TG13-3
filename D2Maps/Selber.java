@@ -18,8 +18,7 @@ public class Selber {
 
         for (Map.Entry m: keinDeutscherPass.entrySet())
         {
-            System.out.println(m.getKey()+ " " + m.getValue());
-            
+            System.out.println(m.getKey()+ " " + m.getValue());       
         }
         //----------------------------------------------------------
         for (String i : keinDeutscherPass.keySet()) {

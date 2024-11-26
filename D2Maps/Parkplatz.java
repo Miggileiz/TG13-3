@@ -26,6 +26,6 @@ class Parkplatz {
 
     @Override
     public String toString() {
-        return "Parkplatz [parkplatzNr=" + parkplatzNr + ", Hinweis=" + Hinweis + "]";
+        return "parkplatzNr=" + parkplatzNr + ", Hinweis=" + Hinweis;
     }
 }

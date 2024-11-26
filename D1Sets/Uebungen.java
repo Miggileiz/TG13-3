@@ -12,9 +12,9 @@ public static void main(String[] args) {
     mitarbeiterSet.add("Arne");
     mitarbeiterSet.add("Arne");
 
-    for(String ms : mitarbeiterSet)
+    for(String ms : mitarbeiterSet){
         System.out.println(ms);
-
+    }
 
     System.out.println(mitarbeiterSet);
 
@@ -23,14 +23,14 @@ public static void main(String[] args) {
     int setGroesse = mitarbeiterSet.size();
     System.out.println(setGroesse);
 
-    if (setGroesse > 3) {
+    if (mitarbeiterSet.size() > 3) {
         System.out.println("Liste ist Grösser als 1");
     } else{
         System.out.println("Penis");
     }
 
-    if(mitarbeiterSet.contains("Bernd")){
-        System.out.println("Ist Bernd Teil des Teams? " + mitarbeiterSet.contains("Bernd"));
+    if(mitarbeiterSet.contains("Bend")){
+        System.out.println("Ist Bernd Teil des Teams? " );
     }
 
     System.out.println("Ist Bernd Teil des Teams? " + mitarbeiterSet.contains("Bernd"));

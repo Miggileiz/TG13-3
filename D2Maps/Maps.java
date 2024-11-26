@@ -20,6 +20,11 @@ class Maps {
     for(Map.Entry m : people.entrySet()){
           System.out.println(m);
     }
+
+    for (Map.Entry st : people.entrySet()) {
+      System.out.println("key: " + st.getKey() + " " + "value: " + st.getValue());
+    }
+
     // in dem i sind alle
     for (String i : people.keySet()) {
       System.out.println("key: " + i + " value: " + people.get(i));
