@@ -16,18 +16,23 @@ Der **k-Nearest Neighbors Algorithmus (KNN)** ist ein einfacher, instanzbasierte
 ### **Schritt 2: Berechnung der Ähnlichkeit (Distanz)**
 KNN misst die Distanz zwischen dem neuen Punkt \( x_{\text{neu}} \) und jedem Punkt \( x_i \) in der Trainingsmenge. Gängige Distanzmetriken sind:
 
-1. **Euklidische Distanz** (numerische Daten):  
-   \( d(x, y) = \sqrt{\sum_{i=1}^n (x_i - y_i)^2} \)
+
+## Distanzmetriken
+
+1. **Euklidische Distanz**:  
+   Die euklidische Distanz zwischen zwei Punkten \(x\) und \(y\) mit \(n\) Dimensionen berechnet sich wie folgt:  
+   d(x, y) = √[(x₁ - y₁)² + (x₂ - y₂)² + ... + (xₙ - yₙ)²]
 
 2. **Manhattan-Distanz**:  
-   \( d(x, y) = \sum_{i=1}^n |x_i - y_i| \)
+   Die Manhattan-Distanz ist die Summe der absoluten Differenzen der Koordinaten:  
+   d(x, y) = |x₁ - y₁| + |x₂ - y₂| + ... + |xₙ - yₙ|
 
-3. **Hamming-Distanz** (kategoriale Daten):  
-   Misst die Anzahl der Unterschiede zwischen zwei Punkten.
+3. **Hamming-Distanz**:  
+   Die Hamming-Distanz zählt die Anzahl der Positionen, an denen sich zwei Punkte unterscheiden. Sie wird vor allem bei kategorialen Daten verwendet.
 
-4. **Minkowski-Distanz** (verallgemeinerte Distanz):  
-   \( d(x, y) = \left( \sum_{i=1}^n |x_i - y_i|^p \right)^{1/p} \)
-
+4. **Minkowski-Distanz**:  
+   Die Minkowski-Distanz verallgemeinert die euklidische und Manhattan-Distanz. Sie wird durch den Parameter \(p\) bestimmt:  
+   d(x, y) = [(|x₁ - y₁|ᵖ + |x₂ - y₂|ᵖ + ... + |xₙ - yₙ|ᵖ)]^(1/p)
 ---
 
 ### **Schritt 3: Auswahl der \( k \)-nächsten Nachbarn**
