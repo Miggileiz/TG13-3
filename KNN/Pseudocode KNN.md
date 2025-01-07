@@ -40,7 +40,7 @@ klasse0 <- 0
 klasse1 <- 0 
 
 FÜR i=0 bis i<k erhöhe i um 1
-    klasseDesNachbarn = knns.get(i).klasse
+    klasseDesNachbarn  <- knns.get(i).klasse
     WENN klasseDesNachbarn = 0
         klasse0++
     SONST
@@ -49,9 +49,9 @@ FÜR i=0 bis i<k erhöhe i um 1
 ENDE FÜR
 
 WENN klasse0 > klasse 1
-    o.klasse = 0
+    o.klasse <- 0
 SONST
-    o.klasse = 1
+    o.klasse <- 1
 ENDE WENN
 
 Return o.klasse
