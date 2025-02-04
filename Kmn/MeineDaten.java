@@ -52,7 +52,7 @@ public void setC(Centroid c) {
 
 @Override
 public String toString() {
-    return "MeineDaten [x=" + x + ", y=" + y + ", c=" + c + "]";
+    return "\tMeineDaten [x=" + x + ", y=" + y + ", c=" + c + "]\n";
 }
 
 

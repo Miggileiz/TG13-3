@@ -4,15 +4,47 @@ class KMeansStart {
 
     public static void main(String[] args) {
         System.out.println("TESTEN");
+
+        // Testdaten initialisieren
+        List<MeineDaten> daten = initTestDaten();
+
+        // n zentroiden hinzufügen
+        List<Centroid> centriods = initCentroids();
+
+        // kmeans algorithmus anwenden um n
+        centriods = kMeans(daten, centriods);
+
+        // Ausgabe
+        System.out.println(centriods);
     }
 
-    // Testdaten initialisieren
-    List<MeineDaten> daten = initTestDaten();
+    private static List<Centroid> kMeans(List<MeineDaten> daten, List<Centroid> centriods) {
+        // bestimme Abstände jedes Datenpunktes zu Centroiden
+        Map<Double, Centroid> mapAbstaende = new TreeMap<>();
 
-    // n zentroiden hinzufügen
-    List<Centroid> centriods = initCentroids();
+        for (MeineDaten d : daten) {
+            for (Centroid centroid : centriods) {
+                double abstand = getAbstand(d, centroid);
+                mapAbstaende.put(abstand, centroid);
+            }
 
-    private List<MeineDaten> initTestDaten() {
+            //Nimm den ersten Eintag aus der Map und füge den Datenpunkt dem Zentruid zu
+            List<Centroid> c = new ArrayList<>(mapAbstaende.values());
+            Centroid naechsterCentroid = c.get(0);
+            naechsterCentroid.addData(d);
+            mapAbstaende.clear();
+        }
+
+        return centriods;
+    }
+
+    private static double getAbstand(MeineDaten d, Centroid centroid) {
+        // Abstand berechnen
+
+        return (d.x - centroid.x) * (d.x-centroid.x) + (d.y - centroid.y) * (d.y-centroid.y);
+    }
+
+    private static List<MeineDaten> initTestDaten() {
 
         // Liste erzeugen
         List<MeineDaten> d = new ArrayList<>();
@@ -33,15 +65,12 @@ class KMeansStart {
         return d;
     }
 
-
-
-    private List<Centroid> initCentroids() {
+    private static List<Centroid> initCentroids() {
         // Liste erzeugen
         List<Centroid> c = new ArrayList<>();
-        // Datenpunkte hinzufügen
-        c.add
-        
-
+        // Zentruiden hinzufügen
+        c.add(new Centroid(1, 4, "c1"));
+        c.add(new Centroid(1, 3, "c2"));
 
         // Liste zurückgaben
         return c;

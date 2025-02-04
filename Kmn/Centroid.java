@@ -25,7 +25,7 @@ public class Centroid extends MeineDaten {
 
     @Override
     public String toString() {
-        return "Centroid [x=" + x + ", y=" + y + ", d=" + d + ", name=" + name + "]";
+        return "\tCentroid [x=" + x + ", y=" + y + ", d=" + d + ", name=" + name + "]\n";
     }
 
 
